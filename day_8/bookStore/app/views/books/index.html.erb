@@ -1,0 +1,17 @@
+<table>
+    <thead>
+        <th>Title</th>
+        <th>Genre</th>
+        <th>Author</th>
+    </thead>
+    <tbody>
+    <% for book in @books %>
+    <% @author = Author.find_by_id(book.author_id) %>
+        <tr>
+            <td><%= book.title %></td>
+            <td><%= book.genre %></td>
+            <td><%= @author.first_name %> <%= @author.last_name %></td>
+        </tr>
+    <% end %>
+    </tbody>
+</table>

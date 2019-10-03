@@ -1,0 +1,10 @@
+<h1> My Games </h1>
+
+<% @games.each do |game| %>
+    <% if game == "Poker"%>
+        <li><%= game %></li>
+    <% else %>
+        <li>Game is not Poker</li>
+    <% end %>
+    
+<% end %>
